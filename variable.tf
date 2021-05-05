@@ -43,7 +43,9 @@ variable "kiaasa-development-bastion-host-ami" {
   type    = string
   default = "ami-045e6fa7127ab1ac4"
 }
-#kiaasa_public-subnet-1a-cidr
-#kiaasa_public-subnet-1b-cidr
-#kiaasa_private-subnet-1a-cidr
-#kiaasa_private-subnet-1b-cidr
+
+
+variable "development-certificate-arn" {
+  type    = string
+  default = "arn:aws:acm:ap-south-1:636177926524:certificate/0ee7da6e-56fd-4281-8eda-c3f7edca4d22"
+}
