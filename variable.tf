@@ -8,22 +8,22 @@ variable "aws_region" {
   default = "ap-south-1"
 }
 
-variable "kiaasa_public-subnet-1a-cidr" {
+variable "kiaasa_development_public-subnet-1a-cidr" {
   type    = string
   default = "10.0.1.0/24"
 }
 
-variable "kiaasa_public-subnet-1b-cidr" {
+variable "kiaasa_development_public-subnet-1b-cidr" {
   type    = string
   default = "10.0.2.0/24"
 }
 
-variable "kiaasa_private-subnet-1a-cidr" {
+variable "kiaasa_development_private-subnet-1a-cidr" {
   type    = string
   default = "10.0.3.0/24"
 }
 
-variable "kiaasa_private-subnet-1b-cidr" {
+variable "kiaasa_development_private-subnet-1b-cidr" {
   type    = string
   default = "10.0.4.0/24"
 }
