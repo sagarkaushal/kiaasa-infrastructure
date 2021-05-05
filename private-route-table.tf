@@ -11,7 +11,7 @@ resource "aws_route_table" "kiaasa-development-private-rt-1a" {
   }
 }
 
-resource "aws_route_table_association" "kiaasa-development-rt-ass-1a" {
+resource "aws_route_table_association" "kiaasa-development-private-rt-ass-1a" {
   subnet_id      = aws_subnet.kiaasa_development_private-subnet-1a.id
   route_table_id = aws_route_table.kiaasa-development-private-rt-1a.id
 }
@@ -33,7 +33,7 @@ resource "aws_route_table" "kiaasa-development-private-rt-1b" {
 }
 
 
-resource "aws_route_table_association" "kiaasa-development-rt-ass-1b" {
+resource "aws_route_table_association" "kiaasa-development-private-rt-ass-1b" {
   subnet_id      = aws_subnet.kiaasa_development_private-subnet-1b.id
   route_table_id = aws_route_table.kiaasa-development-private-rt-1b.id
 }
