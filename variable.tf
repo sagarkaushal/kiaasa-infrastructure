@@ -1,9 +1,44 @@
 variable "aws_vpc_cidr" {
-    type = string
-    default = "10.0.0.0/16"
+  type    = string
+  default = "10.0.0.0/16"
 }
 
 variable "aws_region" {
-    type = string
-    default = "ap-south-1"
+  type    = string
+  default = "ap-south-1"
 }
+
+variable "kiaasa_public-subnet-1a-cidr" {
+  type    = string
+  default = "10.0.1.0/24"
+}
+
+variable "kiaasa_public-subnet-1b-cidr" {
+  type    = string
+  default = "10.0.2.0/24"
+}
+
+variable "kiaasa_private-subnet-1a-cidr" {
+  type    = string
+  default = "10.0.3.0/24"
+}
+
+variable "kiaasa_private-subnet-1b-cidr" {
+  type    = string
+  default = "10.0.4.0/24"
+}
+
+
+variable "availability_zone-1a" {
+  type    = string
+  default = "ap-south-1a"
+}
+
+variable "availability_zone-1b" {
+  type    = string
+  default = "ap-south-1b"
+}
+#kiaasa_public-subnet-1a-cidr
+#kiaasa_public-subnet-1b-cidr
+#kiaasa_private-subnet-1a-cidr
+#kiaasa_private-subnet-1b-cidr
