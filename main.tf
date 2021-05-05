@@ -12,7 +12,7 @@ terraform {
         bucket = "kiaasa-bucket-infra"
         key = "development/terraform.tfstate"
         region = "ap-south-1"
-        dynamodb_table = "kiaasainfradevelopment"
+        dynamodb_table = "kiaasadevelopment"
     }
 }
 
