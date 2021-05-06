@@ -54,6 +54,6 @@ variable "development-certificate-arn" {
 
 variable "development-ami-id" {
   type    = string
-  default = "ami-045e6fa7127ab1ac4"
+  default = "ami-0d42f5aec9cd2c75c"
 }
 

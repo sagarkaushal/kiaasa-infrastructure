@@ -1,4 +1,24 @@
 
+
+
+data "template_file" "userdata_template" {
+  template = file("user-data.tpl")
+  vars = {
+    db_host      = "${aws_db_instance.kiaasa-development-rds-mysql.address}",
+    db_username  = "${aws_db_instance.kiaasa-development-rds-mysql.username}"
+    db_password  = "${var.development-db-password}"
+    db_name      = "${aws_db_instance.kiaasa-development-rds-mysql.name}"
+    cache_host   = "${aws_elasticache_replication_group.kiaasa-development-elasticache.primary_endpoint_address}",
+    efs-endpoint = "${aws_efs_file_system.kiaasa-development_efs.dns_name}"
+  }
+}
+
+
+
+
+
+
+
 #Launch Configuration
 resource "aws_launch_configuration" "kiaasa-development-launch-configuration" {
   name_prefix     = "Kiaasa Development Launch Configuration"
@@ -6,6 +26,7 @@ resource "aws_launch_configuration" "kiaasa-development-launch-configuration" {
   instance_type   = "t2.micro"
   security_groups = [aws_security_group.kiaasa-development-asg-sg.id]
   key_name        = "kiaasa-development"
+  user_data       = data.template_file.userdata_template.rendered
   lifecycle {
     create_before_destroy = true
   }
