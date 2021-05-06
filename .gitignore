@@ -9,6 +9,7 @@
 # Directories
 .terraform/
 .vagrant/
+db-variable-tf
 
 # SSH Keys
 *.pem

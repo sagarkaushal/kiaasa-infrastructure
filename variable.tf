@@ -56,3 +56,4 @@ variable "development-ami-id" {
   type    = string
   default = "ami-045e6fa7127ab1ac4"
 }
+
