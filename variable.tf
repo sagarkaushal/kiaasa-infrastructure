@@ -47,7 +47,7 @@ variable "kiaasa-development-bastion-host-ami" {
 
 variable "development-certificate-arn" {
   type    = string
-  default = "arn:aws:acm:ap-south-1:636177926524:certificate/0ee7da6e-56fd-4281-8eda-c3f7edca4d22"
+  default = "arn:aws:acm:ap-south-1:636177926524:certificate/6f25dbf0-3225-47a1-8635-ed43d8f33033"
 }
 
 
