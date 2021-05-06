@@ -37,9 +37,9 @@ resource "aws_autoscaling_group" "kiaasa-development-frontend-asg" {
   name                 = "Kiaasa-development-frontend-asg"
   launch_configuration = aws_launch_configuration.kiaasa-development-launch-configuration.name
   health_check_type    = "ELB"
-  min_size             = 0
-  max_size             = 0
-  desired_capacity     = 0
+  min_size             = 1
+  max_size             = 2
+  desired_capacity     = 1
   vpc_zone_identifier = [
     aws_subnet.kiaasa_development_private-subnet-1a.id, aws_subnet.kiaasa_development_private-subnet-1b.id
   ]
@@ -59,9 +59,9 @@ resource "aws_autoscaling_group" "kiaasa-development-backend-asg" {
   name                 = "Kiaasa-development-backend-asg"
   launch_configuration = aws_launch_configuration.kiaasa-development-launch-configuration.name
   health_check_type    = "ELB"
-  min_size             = 0
-  max_size             = 0
-  desired_capacity     = 0
+  min_size             = 1
+  max_size             = 2
+  desired_capacity     = 1
   vpc_zone_identifier = [
     aws_subnet.kiaasa_development_private-subnet-1a.id, aws_subnet.kiaasa_development_private-subnet-1b.id
   ]

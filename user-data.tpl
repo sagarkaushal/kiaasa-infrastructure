@@ -1,3 +1,6 @@
+#!/bin/bash
+
+
 # Insert Environment Variables
 
 cd /var/www/html/app/etc/
@@ -9,6 +12,8 @@ sed -i "s/ecc_host_endpoint/${cache_host}/g" env.php
 
 # Mount media folder on EFS
 
+
+apt-get update -y
 apt-get install nfs-common -y
 cd /var/www/html/pub 
 mkdir media-backup 
