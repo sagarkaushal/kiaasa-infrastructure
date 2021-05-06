@@ -106,7 +106,8 @@ resource "aws_security_group" "kiaasa-development-rds-sg" {
     to_port   = 3306
     protocol  = "tcp"
     security_groups = [
-      aws_security_group.kiaasa-development-asg-sg.id
+      aws_security_group.kiaasa-development-asg-sg.id,
+      aws_security_group.kiaasa-bastion-host-development-sg.id
     ]
   }
   tags = {
