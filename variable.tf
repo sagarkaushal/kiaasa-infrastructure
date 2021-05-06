@@ -49,3 +49,10 @@ variable "development-certificate-arn" {
   type    = string
   default = "arn:aws:acm:ap-south-1:636177926524:certificate/0ee7da6e-56fd-4281-8eda-c3f7edca4d22"
 }
+
+
+
+variable "development-ami-id" {
+  type    = string
+  default = "ami-045e6fa7127ab1ac4"
+}
